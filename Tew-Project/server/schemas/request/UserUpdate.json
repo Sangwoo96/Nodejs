@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "pwd": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "example": {
+    "pwd": "test12"
+  }
+}

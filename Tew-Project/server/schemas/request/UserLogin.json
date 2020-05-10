@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pwd": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "example": {
+    "id": "test1234",
+    "pwd": "test1234"
+  }
+}

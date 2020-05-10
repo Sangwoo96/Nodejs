@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <input type="file" id="file" name="file" multiple />
+    <button type="button" id="button">Upload</button>
+  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    // const file = document.getElementById('file')
+    // file.addEventListener('change', fileChosen);
+    const button = document.getElementById("button");
+    button.addEventListener("click", fileChosen, false);
+
+    var selectedFile = null;
+    var file = null;
+
+    async function fileChosen(event) {
+      // console.log(event);
+      if (document.getElementById("file").files.length >= 1) {
+        selectedFile = document.getElementById("file").files[0]; //하나만 받아올것이기 때문에
+        const extensionUrl =
+          "http://127.0.0.1:3000/common/getExtension?type=" + selectedFile.type;
+        axios.get(extensionUrl).then(s3Res => {
+          var data = s3Res.data;
+          console.log(data);
+          const getUploadUrl =
+            "http://127.0.0.1:3000/common/fileUploadUrl?mimetype=" +
+            selectedFile.type +
+            "&extension=" +
+            data.extension;
+          axios.get(getUploadUrl).then(s3Res => {
+            let signatureUrl = s3Res.data.url;
+            console.log(signatureUrl);
+            axios.put(signatureUrl, selectedFile, {}).then(res => {
+              console.log("put reuslt", res);
+            });
+          });
+        });
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "content": {
+      "type": "string",
+      "minLength": 1
+    },
+    "imagepath": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "example": {
+    "title": "여행",
+    "content": "asdfasd",
+    "imagepath": "ww23awefawef"
+  }
+}

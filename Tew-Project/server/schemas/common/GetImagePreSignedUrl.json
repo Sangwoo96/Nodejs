@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "mimetype": {
+      "type": "string"
+    },
+    "extension": {
+      "type": "string"
+    },
+    "filename": {
+      "type": "string"
+    }
+  },
+  "required": ["mimetype", "extension", "filename"]
+}
