@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "USER_IDX": {
+      "type": "number",
+      "minimum": 0
+    },
+    "TABLE_NAME": {
+      "type": "string",
+      "minLength": 1
+    },
+    "TABLE_IDX": {
+      "type": "number",
+      "minimum": 0
+    },
+    "TITLE": {
+      "type": "string",
+      "minLength": 1
+    },
+    "CONTENT": {
+      "type": "string",
+      "minLength": 1
+    },
+    "SCORE": {
+      "type": "string",
+      "enum": ["1", "2", "3", "4", "5"]
+    }
+  },
+  "example": {
+    "USER_IDX": "1",
+    "TABLE_NAME": "CLASS_EVERYWHERE",
+    "TABLE_IDX": "20",
+    "TITLE": "좋아요!",
+    "CONTENT": "좋아요!!!",
+    "SCORE": "5"
+  }
+}

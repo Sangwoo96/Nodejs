@@ -1,0 +1,92 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "imagePath": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classType": {
+      "type": "string",
+      "enum": ["1:1", "1:4", "1:6", "1:M", "1:H"]
+    },
+    "curriculumIdx": {
+      "type": "number",
+      "minimum": 0
+    },
+    "targetCategory": {
+      "type": "number",
+      "minimum": 0
+    },
+    "catgoryIdx": {
+      "type": "number",
+      "minimum": 0
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1
+    },
+    "desc": {
+      "type": "string",
+      "minlength": 1
+    },
+    "beginDate": {
+      "type": "string",
+      "minlength": 1
+    },
+    "endDate": {
+      "type": "string",
+      "minlength": 1
+    },
+    "academy": {
+      "type": "string",
+      "minlength": 1
+    },
+    "tutorIdx": {
+      "type": "string",
+      "minlength": 1
+    },
+    "keyword": {
+      "type": "string",
+      "minlength": 1
+    },
+    "likeCount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "price": {
+      "type": "number",
+      "minimum": 0
+    },
+    "authorized": {
+      "type": "string",
+      "enum": ["true", "false"]
+    },
+    "courseLength": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "example": {
+    "title": "title",
+    "imagePath": "akwefuwkeuf",
+    "classType": "1:1",
+    "curriculumIdx": "1",
+    "targetCategory": "1",
+    "categoryIdx": "1",
+    "subject": "math",
+    "desc": "desc",
+    "beginDate": "2019",
+    "endDate": "2020",
+    "academy": "everywhere",
+    "tutorIdx": "awfdf112",
+    "keyword": "keyword",
+    "likeCount": "100",
+    "price": "1000",
+    "authorized": "true",
+    "courseLength": "20"
+  }
+}

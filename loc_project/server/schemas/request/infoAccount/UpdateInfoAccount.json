@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "BANK": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ACCOUNT_NUM": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "example": {
+    "BANK": "국민은행",
+    "ACCOUNT_NUM": "79897889788"
+  }
+}

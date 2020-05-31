@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "USER_IDX": {
+      "type": "number",
+      "minimum": 0
+    },
+    "BANK": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ACCOUNT_NUM": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "example": {
+    "USER_IDX": "30",
+    "BANK": "하나은행",
+    "ACCOUNT_NUM": "12341234123124"
+  }
+}

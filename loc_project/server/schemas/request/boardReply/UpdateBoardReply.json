@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "USER_IDX": {
+      "type": "number",
+      "minimum": 0
+    },
+    "GROUP": {
+      "type": "number",
+      "minimum": 0
+    },
+    "GROUP_ORDER": {
+      "type": "number",
+      "minimum": 0
+    },
+    "DEPTH": {
+      "type": "number",
+      "minimum": 0
+    },
+    "TITLE": {
+      "type": "string",
+      "minLength": 1
+    },
+    "CONTENT": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "example": {
+    "USER_IDX": "8",
+    "GROUP": "8",
+    "GROUP_ORDER": "8",
+    "DEPTH": "8",
+    "TITLE": "제목수정완료",
+    "CONTENT": "수정완료"
+  }
+}
