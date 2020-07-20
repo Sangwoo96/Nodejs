@@ -29,7 +29,7 @@
     "http-errors": "^1.7.3",
     "jimp": "^0.6.4",
     "jsonwebtoken": "^8.3.0",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.19",
     "log4js": "^3.0.5",
     "moment": "^2.24.0",
     "morgan": "^1.9.1",
